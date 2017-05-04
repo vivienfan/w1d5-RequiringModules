@@ -1,5 +1,11 @@
 module.exports = {
+  name: "name0",
+
   hello: function() {
-    console.log("Hello World!");
+    sayHello.call(this);
   }
 };
+
+function sayHello() {
+  console.log("Hello,", this.name);
+}
